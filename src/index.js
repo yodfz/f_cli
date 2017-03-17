@@ -9,7 +9,7 @@ var aText = '创建一个模版页,会根据后缀名来确定文件类型' +
 program
     .version('0.0.1')
     .option('a, add [name]',aText)
-    .option('i, init [name]', '创建与之相关的模版项目，当前可选参数有 vue react')
+    .option('i, init [name]', '创建与之相关的模版项目，当前可选参数有:vue react')
     .parse(process.argv);
 
 if (program.init) {
