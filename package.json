@@ -1,0 +1,22 @@
+{
+  "name": "f_cli",
+  "version": "1.0.0",
+  "description": "create react,vue,...page template.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/yodfz/f_cli.git",
+  "author": "zhaoyifeng <yodfz@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yodfz/f_cli/issues"
+  },
+  "bin": {
+    "f_cli": "./src/index.js"
+  },
+  "homepage": "https://github.com/yodfz/f_cli#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
