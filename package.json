@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/yodfz/f_cli#readme",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "ora": "^1.1.0"
   }
 }
