@@ -8,13 +8,19 @@ module.exports = (nowPath, key, name)=> {
     var template = page_template[key];
     if (template) {
         template.files.map(data=> {
-            var templateData = fs.readFileSync(__dirname + data.path, 'utf-8');
             var fileName = data.name.replace('[name]', name);
-            fs.writeFileSync(nowPath + '/' + fileName, templateData);
-            console.log("创建" + fileName);
+            // 判断文件是否存在
+            if (fs.existsSync(nowPath + '/' + fileName)) {
+                console.log('已存在同名文件[' + fileName + '],无法创建!');
+            }else{
+                var templateData = fs.readFileSync(__dirname + data.path, 'utf-8');
+                fs.writeFileSync(nowPath + '/' + fileName, templateData);
+                console.log("创建" + fileName);
+            }
+
         });
         console.log('[SUCCESS]');
     } else {
         throw '不支持此类型文件模版。';
     }
-}
+};
