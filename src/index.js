@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var program = require('commander');
-var fs = require('fs');
 var createFile = require('./createFile');
 var aText = '创建一个模版页,会根据后缀名来确定文件类型' +
     '\n\t\t    支持 vue react 微信小程序模版:' +
@@ -22,7 +21,7 @@ if (program.add) {
         console.log('请输入需要创建的文件名');
         return;
     }
-    createFile(program.add, program.args[0]);
+    createFile(nowPath,program.add, program.args[0]);
     // console.log('你选择创建' + program.add + '项目,正在下载中...');
     return;
 }

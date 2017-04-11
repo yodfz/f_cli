@@ -2,19 +2,18 @@
 //
 // }(program.add, program.args[0]));
 var page_template = require('./page_template');
+var fs = require('fs');
 
-module.exports = (key, name)=> {
+module.exports = (nowPath, key, name)=> {
     var template = page_template[key];
     if (template) {
         template.files.map(data=> {
-            fs.readFile(__dirname + data.path, 'utf-8', (err, data)=> {
-                fs.writeFile(nowPath + '/' + data.name.replace('[name]', name), data, w_err=> {
-                    if (w_err) throw w_err;
-                    console.log("创建" + program.add);
-                });
-            });
+            var templateData = fs.readFileSync(__dirname + data.path, 'utf-8');
+            var fileName = data.name.replace('[name]', name);
+            fs.writeFileSync(nowPath + '/' + fileName, templateData);
+            console.log("创建" + fileName);
         });
-        console.log('[END]');
+        console.log('[SUCCESS]');
     } else {
         throw '不支持此类型文件模版。';
     }
