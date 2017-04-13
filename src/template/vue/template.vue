@@ -5,18 +5,18 @@
 <script type="text/babel">
     export default {
         // 组件
-        components:{},
+        components: {},
         // 动态计算
         computed: {},
         props: [],
         // 数据
         data () {
             return {
+                isFetch: false
             };
         },
         // 方法
-        methods:{
-        },
+        methods: {},
         // 在实例初始化之后，数据观测(data observer) 和 event/watcher 事件配置之前被调用。
         beforeCreate () {
 
@@ -68,6 +68,6 @@
     };
 </script>
 <style scoped lang="less" rel="stylesheet/less">
-    .index{
+    .index {
     }
 </style>
