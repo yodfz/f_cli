@@ -14,6 +14,7 @@ module.exports = (nowPath, key, name)=> {
                 console.log('已存在同名文件[' + fileName + '],无法创建!');
             }else{
                 var templateData = fs.readFileSync(__dirname + data.path, 'utf-8');
+                // 是否考虑替换参数?
                 fs.writeFileSync(nowPath + '/' + fileName, templateData);
                 console.log("创建" + fileName);
             }
