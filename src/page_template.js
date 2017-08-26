@@ -16,15 +16,15 @@ var $Data = {
         files:[
             {
                 path:'/template/weixin/mic_template.js',
-                name:'[name].js'
+                name:'pages/[name]/[name].js'
             },
             {
                 path:'/template/weixin/mic_template.wxml',
-                name:'[name].wxml'
+                name:'pages/[name]/[name].wxml'
             },
             {
                 path:'/template/weixin/mic_template.wxss',
-                name:'[name].wxss'
+                name:'pages/[name]/[name].wxss'
             }
         ]
     }

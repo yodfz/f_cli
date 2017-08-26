@@ -8,7 +8,7 @@ module.exports = (nowPath, key, name)=> {
     var template = page_template[key];
     if (template) {
         template.files.map(data=> {
-            var fileName = data.name.replace('[name]', name);
+            var fileName = data.name.replace(/\[name\]/ig, name);
             // 判断文件是否存在
             if (fs.existsSync(nowPath + '/' + fileName)) {
                 console.log('已存在同名文件[' + fileName + '],无法创建!');
